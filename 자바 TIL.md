@@ -26,3 +26,23 @@
 
 
 
+<b>05-30</b>
+
+😃<b>str.Length()</b>
+
+<b>문자열의 길이를 받아온다.</b>
+
+<code>b = a.length();</code>
+
+
+
+✔<b>str.charAt(i)</b>
+
+<b>C언어에서의 문자 배열과 같다.</b>
+
+<code>System.out.printf("%c", a.charAt(i));</code>
+
+
+
+
+
