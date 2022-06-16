@@ -1,0 +1,45 @@
+# 06-17
+
+### 😁Interface
+
+#### 추상 클래스와 비슷한 개념이지만 조금 다르다.
+
+- <b>일반 메소드, 생성자를 가질 수 없다.</b>
+
+- class 대신 interface 사용
+- static final을 붙인 필드만 사용 가능
+
+- interface 는 다중 상속을 허용
+
+```java
+package com.example.javapractice2;
+
+interface Car{
+    static final int CAR_COUNT = 0;                         // 인터페이스의 필드는 static final 을 붙여 생성
+
+    abstract void work();                                   // 생략 가능한 abstract로 추상 메소드 선언
+}
+
+class Sedan implements Car{                                 // Car 인터페이스를 상속받는 Sedan 클래스
+    public void work(){                                     // work 메소드
+        System.out.println("승용차가 사람을 태우고 있습니다.");
+    }
+}
+
+class Truck implements Car{                                 // Car 인터페이스를 상속받는 Truck 클래스
+    public void work() {                                    // work 메소드
+        System.out.println("트럭이 짐을 싣고 있습니다.");
+    }
+}
+
+public class Main4 {                                        // 메인 클래스
+    public static void main(String[] args) {                // 메인 메소드
+
+        Sedan sedan1= new Sedan();                          // Sedan 필드
+        sedan1.work();                                      // 메소드 호출
+        Truck truck1 = new Truck();                         // Truck 필드
+        truck1.work();                                      // 메소드 호출
+    }
+}
+```
+
