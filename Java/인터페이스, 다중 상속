@@ -43,3 +43,44 @@ public class Main4 {                                        // 메인 클래스
 }
 ```
 
+
+
+
+
+# 06-17
+
+### 🤩 다중 상속
+
+- 자바에서 지원하지 않는 다중 상속을 interface를 통해 구현
+
+```java
+package com.example.javapractice2;
+
+interface Car{                                          // Car interface
+    void work();                                        // work method
+}
+
+interface Cannon{                                       // Cannon interface
+    void fire();                                        // fire method
+}
+
+class Tank implements Car, Cannon{                      // Car, Cannon 인터페이스를 상속받는 Tank 클래스
+    @Override
+    public void work() {                                // work 메소드
+        System.out.println("탱크가 앞으로 굴러갑니다.");
+    }
+
+    @Override
+    public void fire() {                                // fire 메소드
+        System.out.println("탱크에서 대포를 발사합니다.");
+    }
+}
+
+public class Main5 {                                    // 메인 클래스
+    public static void main(String[] args) {            // 메인 메소드
+        Tank tank1 = new Tank();                        // 탱크 인스턴스
+        tank1.work();                                   // 메소드 호출
+        tank1.fire();                                   // 메소드 호출
+    }
+}
+```
